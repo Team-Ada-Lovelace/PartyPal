@@ -16,15 +16,21 @@ const syncAndSeed = async () => {
         User.create(user);
       })
     );
-    const jane = await User.create({
-      username: 'janeyeh',
-      email: 'janey@gmail.com',
-    });
-    const hpb = await Favorite.create({
-      name: 'Happy Pony Bakery',
-      category: 'caterer',
-      yelp_reference_id: 'ABC123',
-    });
+
+    const favorite = [
+      {
+        name: 'Happy Pony Bakery',
+        category: 'caterer',
+        yelp_reference_id: 'ABC123',
+      },
+      {
+        name: 'Ballroom',
+        category: 'venue',
+        yelp_reference_id: 'ABCDEF123',
+      },
+    ];
+
+    await Favorite.bulkCreate(favorite);
   } catch (error) {
     console.log(error);
   }
