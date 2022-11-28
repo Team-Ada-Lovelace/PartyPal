@@ -9,7 +9,7 @@
 
 const { Sequelize } = require("sequelize");
 const dbUrl =
-  process.env.DATABASE_URL || `postgres://localhost:5432/boilerplate`;
+  process.env.DATABASE_URL || `postgres://localhost:5432/partypal`;
 
 let config;
 if (process.env.DATABASE_URL) {
