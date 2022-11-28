@@ -16,6 +16,11 @@ const Favorite = db.define('favorite', {
   },
   image_url: {
     type: DataTypes.TEXT,
+    validate: {
+      isUrl: true,
+    },
+    defaultValue:
+      'https://images.pexels.com/photos/587739/pexels-photo-587739.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
   },
 });
 
