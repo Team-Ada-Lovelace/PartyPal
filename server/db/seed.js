@@ -22,11 +22,13 @@ const syncAndSeed = async () => {
         name: 'Happy Pony Bakery',
         category: 'caterer',
         yelp_reference_id: 'ABC123',
+        userId: 1,
       },
       {
         name: 'Ballroom',
         category: 'venue',
         yelp_reference_id: 'ABCDEF123',
+        userId: 1,
       },
     ];
 
