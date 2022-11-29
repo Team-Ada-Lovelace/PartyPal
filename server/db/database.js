@@ -7,9 +7,9 @@
 
 // module.exports = {db}
 
-const { Sequelize } = require("sequelize");
-const dbUrl =
-  process.env.DATABASE_URL || `postgres://localhost:5432/partypal`;
+const { Sequelize } = require('sequelize');
+const dbUrl = process.env.DATABASE_URL || `postgres://localhost:5432/partypal`;
+require('dotenv').config();
 
 let config;
 if (process.env.DATABASE_URL) {
