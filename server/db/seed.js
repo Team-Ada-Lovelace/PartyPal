@@ -7,6 +7,7 @@ const syncAndSeed = async () => {
     await db.authenticate();
     // this erases users everytime database starts over - DELETE BEFORE DEPLOYING
     await db.sync({ force: true });
+
     const users = [
       { username: 'iraisv', password: '1234' },
       { username: 'yuri', password: 'abcd' },
@@ -37,7 +38,7 @@ const syncAndSeed = async () => {
     console.log(error);
   }
 };
-
+syncAndSeed();
 module.exports = {
   syncAndSeed,
 };

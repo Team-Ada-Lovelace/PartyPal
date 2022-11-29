@@ -1,7 +1,8 @@
-const { db } = require('./database.js');
+const { db } = require('./database');
 const { User } = require('./models/User');
 const { Favorite } = require('./models/Favorite');
 const { syncAndSeed } = require('./seed');
+
 // // make models associations here!
 
 User.hasMany(Favorite);
@@ -12,7 +13,6 @@ Favorite.belongsTo(User);
 module.exports = {
   db,
   syncAndSeed,
-  User,
-  Favorite,
+  models: { User, Favorite },
   //other models
 };
